@@ -1,0 +1,5 @@
+a=int(input("Enter a number to check if it is greater than 50 and is even."))
+if (a>50 (a%2==0)):
+    print("It is greater than 50 and it is an even number!")  
+else:
+    print("It is smaller than 50 and it is an odd number!")
