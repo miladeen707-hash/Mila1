@@ -1,0 +1,21 @@
+def sum (a,b):
+    return a+b
+def sub (a,b):
+    return a+b
+def mul (a,b):
+    return a+b
+def div (a,b):
+    return a+b
+choise=input("Enter 1 for Addition, 2 for subtraction, 3 for multiplication and 4 for division")
+a=int(input("Enter first number"))
+a=int(input("Enter second number"))
+if choise=="1":
+    print(sum(a,b))
+elif choise=="2":
+    print(sub(a,b))
+elif choise=="3":
+    print(mul(a,b))
+elif choise=="4":
+    print(div(a,b))
+else:
+    print("Invalid choise")
