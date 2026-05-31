@@ -1,0 +1,44 @@
+class Playlist():
+  #parametrised constuctor
+  def__init__(self, name, genre):
+    self.name=name
+    self.genre=genre
+    self.songs=[]
+    print(f"playlist'{self.name)'({self.genre}) ir ready!")
+  #add song
+  def add_song(self,song):
+    self.songsp.append(song):
+      print(f"'{song}added to {self.name}")
+  #remove song
+  def remove_song(self,song):
+    if song in self.songs:
+      self.songsp.remove(song):
+      print(f"'{song} removed")
+    else:
+      print(f"'{song} is not in playlist")
+  #display songs
+  def display(self):
+    print(f"\n--{self.name}({sel.genre})
+    if self.songs:
+      for i ,song in enumerte(self.songs,1):
+        print(f"{i},song)
+      else:
+        print("no songs yet")
+  my_playlist=Playlist("Road tripmix","Pop")
+  while True:
+    print Playlist("1.add song 2.remove song 3.view playlist 4.delete and quit")
+    ch=input("enter your choice")
+    if ch=="1":
+      song=input("enter your song")
+      my_playlist.add_song(song)
+    el if ch=="2":
+      song=input("enter your song to remove")
+      my_playlist.remove_song(song)
+    elif ch=="3":
+      
+      my_playlist.display()
+    if ch=="4":
+      del my_playlist
+      break
+    else:
+      print("invalid")
