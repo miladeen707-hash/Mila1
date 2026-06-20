@@ -1,0 +1,9 @@
+file=open("My Bucket list.txt","w")
+file.write("1.Visit the EiffelTower.\n"
+            "2.Learn to play the guitar.\n3.code my own game.")
+file.close()
+file=open("My Bucket list.txt", "r")
+content=file.read()
+print("==My Bucket list== ")
+print(content)
+file.close()
