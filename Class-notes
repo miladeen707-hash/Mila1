@@ -1,0 +1,18 @@
+n=int(input("How many characters to preview?"))
+file=open("Class-notes.txt","r")
+print(file.read(n))
+file.close()
+print()
+file=open("Class-notes.txt","r")
+lines=file.readlines()
+file.close()
+print("total lines",len(lines))
+word=input("Enter a word to search for:")
+file=open("Class-notes.txt","r")
+for line in file :
+    if line.startswith(word):
+        print("skip",line.strip())
+    else:
+        print("keep",line.strip)
+file.close()
+print()
