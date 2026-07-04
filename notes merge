@@ -1,0 +1,20 @@
+import os
+#read with autocloose
+print("==science notes==")
+with open("sciencenotes.txt","r") as f:
+    for line in f:
+        print(line.strip())
+print()
+#count words in each line
+print("==Word count==")
+with open("mathnotes.txt","r") as f:
+    for line in f:
+        words = line.split() 
+        print(len(words),"words=>",line.strip())
+print()
+#merge file
+print("==Merge files==")
+if os.path.exists("allnotes.txt"):
+    print("allnotes.txt already exists, overriting it")
+else:
+    print("allnotes.txt already exists, creating it")
