@@ -1,0 +1,32 @@
+#part1
+from tkinter import *
+from tkinter import messagebox
+from PIL import Image,ImageTk
+window=Tk()
+window.title("Photo Album")
+window.geometry("400x420")
+#part2
+title=Label(window,text="My Photo Album",fg="white",bg="purple",width=40)
+title.pack(pady=10)
+img1=Image.open(r"C:\Users\Deen\Desktop\CODINGAL\R.jpg")
+img1=img1.resize((300,180))
+photo=ImageTk.PhotoImage(img1)
+pic=Label(window,image=photo)
+pic.pack(pady=5)
+#part3
+def msg():
+    messagebox.showinfo("Great", "You clicked the photo")
+    msgbtn=Button(window,text="click me",command=msg)
+    msgbtn.pack(pady=10)
+def show():
+    top=Toplevel()
+    top.title("Photo Details")
+    top.geometry("200x120")
+    info=Label(top,text="Taken on :Sunday 19 july 2026")
+    info.pack(pady=10)
+    place=Label(top,text="Location:My garden")
+    place.pack(pady=10)
+    top.mainloop()
+detailsbtn=Button(window,text="showdetails",command=show)
+detailsbtn.pack(pady=10)
+window.mainloop()
