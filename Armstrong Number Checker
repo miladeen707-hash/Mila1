@@ -1,0 +1,44 @@
+# Armstrong Number Checker
+# An Armstrong number is a number that is equal to the sum of its own digits
+# each raised to the power of the number of digits.
+
+def is_armstrong(number: int) -> bool:
+    """
+    Check if a number is an Armstrong number.
+    :param number: Integer to check
+    :return: True if Armstrong number, False otherwise
+    """
+    # Convert number to string to easily count digits
+    digits = str(abs(number))  # abs() to handle negative inputs gracefully
+    num_digits = len(digits)
+
+    # Calculate sum of each digit raised to the power of num_digits
+    total = sum(int(digit) ** num_digits for digit in digits)
+
+    return total == abs(number)
+
+
+def main():
+    try:
+        # Get user input
+        user_input = input("Enter an integer: ").strip()
+
+        # Validate input
+        if not user_input.lstrip('-').isdigit():
+            print("Invalid input. Please enter a valid integer.")
+            return
+
+        number = int(user_input)
+
+        # Check Armstrong condition
+        if is_armstrong(number):
+            print(f"{number} is an Armstrong number.")
+        else:
+            print(f"{number} is NOT an Armstrong number.")
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+
+if __name__ == "__main__":
+    main()
