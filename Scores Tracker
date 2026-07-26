@@ -1,0 +1,25 @@
+names=["Mila","Roya","Lamar","Gaia","Georgia"]
+scores=[90,89,80,82,80]
+n=len(scores)
+print("==Score Tracker(n=",n,"players)==")
+for i in range(n):
+    print(i+1,".",names[i],":",scores[i],sep="")
+print()
+#part 2 Theta(1)-direct index access
+steps=1
+print("scores at index 0:",scores[0],"steps=",steps,"Theta(1)-Tight bound")
+#part3 o(n)-linear search by scanning from the very start
+target="Mila"
+steps =0
+for name in names:
+    steps+=1
+    if name ==target:
+        break
+print("Search for ",target,"steps=",steps,"Omega (1) best case lower bound")
+target="Georgia"
+steps =0
+for name in names:
+    steps+=1
+    if name ==target:
+        break
+print("Search for ",target,"steps=",steps,"O(n)=",n,"worst case upper bound")
