@@ -1,0 +1,108 @@
+import random
+from tkinter import Tk, Label, Button, StringVar
+
+
+def play_round(player_choice):
+    """Core function utilizing conditional statements to determine the winner."""
+    options = ["Rock", "Paper", "Scissors"]
+
+    
+    computer_choice = random.choice(options)
+
+    
+    if player_choice == computer_choice:
+        result = "It's a Tie!"
+    elif (
+        (player_choice == "Rock" and computer_choice == "Scissors")
+        or (player_choice == "Paper" and computer_choice == "Rock")
+        or (player_choice == "Scissors" and computer_choice == "Paper")
+    ):
+        result = "You Win!"
+    else:
+        result = "Computer Wins!"
+
+   
+    user_choice_var.set(f"Your Choice: {player_choice}")
+    comp_choice_var.set(f"Computer's Choice: {computer_choice}")
+    result_var.set(result)
+
+
+def reset_game():
+    """Function to clear labels back to their default starting states."""
+    user_choice_var.set("Your Choice: None")
+    comp_choice_var.set("Computer's Choice: None")
+    result_var.set("Make your move!")
+
+root = Tk()
+root.title("Rock Paper Scissors")
+root.geometry("400x300")
+root.config(bg="#2C3E50")
+
+user_choice_var = StringVar(value="Your Choice: None")
+comp_choice_var = StringVar(value="Computer's Choice: None")
+result_var = StringVar(value="Make your move!")
+
+title_label = Label(
+    root,
+    text="Rock Paper Scissors",
+    font=("Arial", 18, "bold"),
+    fg="#ECF0F1",
+    bg="#2C3E50",
+)
+title_label.pack(pady=10)
+
+user_label = Label(
+    root, textvariable=user_choice_var, font=("Arial", 12), fg="#BDC3C7", bg="#2C3E50"
+)
+user_label.pack(pady=5)
+
+comp_label = Label(
+    root, textvariable=comp_choice_var, font=("Arial", 12), fg="#BDC3C7", bg="#2C3E50"
+)
+comp_label.pack(pady=5)
+
+result_label = Label(
+    root,
+    textvariable=result_var,
+    font=("Arial", 14, "bold"),
+    fg="#E74C3C",
+    bg="#2C3E50",
+)
+result_label.pack(pady=15)
+
+btn_rock = Button(
+    root,
+    text="Rock",
+    width=10,
+    command=lambda: play_round("Rock"),
+    bg="#34495E",
+    fg="white",
+)
+btn_rock.pack(side="left", padx=20, pady=10)
+
+btn_paper = Button(
+    root,
+    text="Paper",
+    width=10,
+    command=lambda: play_round("Paper"),
+    bg="#34495E",
+    fg="white",
+)
+btn_paper.pack(side="left", padx=20, pady=10)
+
+btn_scissors = Button(
+    root,
+    text="Scissors",
+    width=10,
+    command=lambda: play_round("Scissors"),
+    bg="#34495E",
+    fg="white",
+)
+btn_scissors.pack(side="left", padx=20, pady=10)
+
+btn_reset = Button(
+    root, text="Reset", width=8, command=reset_game, bg="#95A5A6", fg="black"
+)
+btn_reset.pack(side="bottom", pady=20)
+
+root.mainloop()
