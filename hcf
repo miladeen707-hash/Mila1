@@ -1,0 +1,7 @@
+numlargest=int(input("enter largest number"))
+numsmallest=int(input("enter smallest number"))
+while(numsmallest):
+    numstore=numsmallest
+    numsmallest=numlargest%numsmallest
+    numlargest=numstore
+print("hcf is",numlargest)
