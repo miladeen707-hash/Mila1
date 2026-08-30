@@ -1,0 +1,8 @@
+num=str(input("Enter a number"))
+print("original number",num)
+revnum=str(num)[::-1]
+print("reverse number",revnum)
+if revnum==num:
+    print("Number is in palindrome!")
+else:
+    print("Number is not in palindrome!")
