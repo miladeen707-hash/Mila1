@@ -1,0 +1,8 @@
+n=int(input("Enter a number(try 5 to 12)"))
+print("NOT")
+print("12",bin(12)[2:])
+print("not 12",~12 & 0xff)
+print("XOR")
+print(" 12 ^ 10",12 ^ 10)
+print("left shift")
+print("",n,"<<1",n<<1,)
