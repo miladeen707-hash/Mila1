@@ -1,0 +1,13 @@
+input("First set bit , the rightmost 1 in the binary number.Press enter")
+print("5=",bin(5)[2:])
+print("8=",bin(8)[2:])
+n=int(input("Enter a number(try 8 or 14)"))
+temp=n
+pos=0
+while temp>0:
+    print("binary ",bin(temp)[2:])
+    if temp & 1:
+        break
+    pos += 1
+    temp>>=1
+print("First set bit of n is",n,"Is at position",pos)
