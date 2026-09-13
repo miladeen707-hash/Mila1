@@ -1,0 +1,34 @@
+class RobotPart:
+
+    def __init__(self, name):
+      self.name = name  
+  
+    def status(self):
+      return f"{self.name} is active."
+  
+  
+  
+class Wheel(RobotPart):
+  
+    def __init__(self, name, speed):
+      super().__init__(name)
+      self.speed = speed  
+  
+    def status(self):
+      return f"Wheel {self.name} rolls at speed {self.speed}."
+  
+class Robot:
+  
+    def __init__(self, name):
+      self.name = name
+      self.left_wheel = Wheel("Left", 50)
+      self.right_wheel = Wheel("Right", 50)
+  
+    def introduce(self):
+      print(f"I am robot {self.name}.")
+      print(self.left_wheel.status())
+      print(self.right_wheel.status())
+
+my_robot = Robot("RoboX")
+my_robot.introduce()
+  
