@@ -1,0 +1,7 @@
+n=int(input("Enter a number try 6 or 11"))
+nums=[3,n,5,3,5]
+guess = input("which in " + str(nums) + " appears once? ")
+result=0
+for x in nums:
+    result^= x
+print("guess",guess,"result",result)
