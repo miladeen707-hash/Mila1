@@ -1,0 +1,5 @@
+input("power of 4 n%3==1 power of 8 n% 7==1,Press Enter")
+print("16=",bin(16)[2:]) 
+print("16%3=",16%3,"power of 4:yes")
+print("64=",bin(64)[2:]) 
+print("64%7=",64%7,"power of 8:yes")
