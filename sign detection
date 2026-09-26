@@ -1,0 +1,3 @@
+input("XOR sighn detection - n ^ m < 0 means different sighns.Press Enter")
+print(" 4 ^ 2 =",4 ^ 2, " same signs positive")
+print(" 4 ^ -2 =",4 ^ -2, " different signs negative")
