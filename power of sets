@@ -1,0 +1,7 @@
+input("Aset of n elements has 2 ^n subsetd.Press Enter")
+print("3 elements 2^3=",2**3,"subsets")
+print("mask 5 = binary",bin(5)[2:],"select possition 0 and 2")
+n=int(input("Enter number of elements (try 4 or 5)"))
+guess=input("how many elements"+str(n)+"Elements have")
+input("Each element is in or out.2 choices per element")
+print("",n,"elements subsets",2**n,"your guess",guess)
