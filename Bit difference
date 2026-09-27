@@ -1,0 +1,2 @@
+input("Bit difference - XOR shows which bits differ.Press Enter")
+print(" 5 ^ 3 =", 5 ^ 3, " binary", bin(5^3)[2:], "Bits different:", bin(5 ^ 3).count('1'))
