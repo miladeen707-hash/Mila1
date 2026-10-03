@@ -1,0 +1,11 @@
+#sum down
+def sum_down(n):
+    if n==0:
+        return 0
+    return n + sum_down(n-1)
+input("recursion - a funtion calls itself untill a base case stops it.Press Enter")
+print("sum_dum(3)=3+2+1+0",sum_down(3))
+print("sum_dum(4)=4+3+2+1+0",sum_down(4))
+n=int(input("Enter a number (try 5 or 6)"))
+guess=input("What is sum_dum of("+str(n)+")")
+print("sum_down of",sum_down(n),"your guess",guess)
