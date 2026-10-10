@@ -1,0 +1,12 @@
+# list sum
+def list_sum(lst):
+    if lst==[]:
+        return 0
+    return lst[0]+list_sum(lst[1:])
+print("Rercursive sum--- add head to sum of the tail until list becomes emty")
+print("list_sum[1,2,3]=",list_sum([1,2,3,]))
+print("list_sum[10,20,30]=",list_sum([10,20,30,]))
+lst=[int(x) for x in input("enter 4 numbers separated by spaces").split()]
+guess=input("What is the sum of"+str(lst)+"?")
+print("lst_sum adds head to list_sum( tail )until the list becomes empty")
+print("sum =",list_sum(lst),"your guess",guess)
