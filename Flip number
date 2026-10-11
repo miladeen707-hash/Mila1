@@ -1,0 +1,12 @@
+def flip_num(n):
+    if n//10==0:
+        return n
+    last=n%10 
+    rest=flip_num(n//10)
+    return last*pow(10,len(str(rest)))+rest
+print("reverse a number flip number peels last digit with % 10 an then recurses on //10")
+print("flip number(500)",flip_num(500))
+print("flip number(456)",flip_num(456))
+n=int(input("Enter a number"))
+guess=input("what is flip number"+str(n))
+next=print("flip number=",flip_num(n),"your guess is",guess)
